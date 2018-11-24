@@ -1,0 +1,93 @@
+[
+   {
+      "id": 1,
+      "adType": "sale",
+      "buildingType": "apartment",
+      "area": 150,
+      "bedroomsCount": 3,
+      "floor": 5,
+      "hasLoan": true
+   },
+   {
+      "id": 2,
+      "adType": "sale",
+      "buildingType": "villa",
+      "area": 960,
+      "bedroomsCount": 5,
+      "floor": 1,
+      "hasLoan": false
+   },
+   {
+      "id": 3,
+      "adType": "rent",
+      "buildingType": "house",
+      "area": 630,
+      "bedroomsCount": 4,
+      "floor": 1,
+      "hasLoan": false
+   },
+   {
+      "id": 4,
+      "adType": "sale",
+      "buildingType": "house",
+      "area": 545,
+      "bedroomsCount": 3,
+      "floor": 1,
+      "hasLoan": false
+   },
+   {
+      "id": 5,
+      "adType": "rent",
+      "buildingType": "condo",
+      "area": 170,
+      "bedroomsCount": 2,
+      "floor": 7,
+      "hasLoan": true
+   },
+   {
+      "id": 6,
+      "adType": "rent",
+      "buildingType": "duplex",
+      "area": 212,
+      "bedroomsCount": 3,
+      "floor": 1,
+      "hasLoan": true
+   },
+   {
+      "id": 7,
+      "adType": "rent",
+      "buildingType": "apartment",
+      "area": 140,
+      "bedroomsCount": 2,
+      "floor": 8,
+      "hasLoan": false
+   },
+   {
+      "id": 8,
+      "adType": "rent",
+      "buildingType": "apartment",
+      "area": 125,
+      "bedroomsCount": 1,
+      "floor": 6,
+      "hasLoan": true
+   },
+   {
+      "id": 9,
+      "adType": "sale",
+      "buildingType": "flat",
+      "area": 90,
+      "bedroomsCount": 1,
+      "floor": 2,
+      "hasLoan": false
+   },
+   {
+      "id": 10,
+      "adType": "sale",
+      "buildingType": "villa",
+      "area": 320,
+      "bedroomsCount": 3,
+      "floor": 1,
+      "hasLoan": false
+   }
+]
+
