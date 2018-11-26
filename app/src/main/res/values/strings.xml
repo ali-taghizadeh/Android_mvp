@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Android_mvp</string>
     <string name="action_settings">Settings</string>
+    <string name="android_mvp">Android MVP</string>
 </resources>
