@@ -6,8 +6,7 @@
       "buildingType": "apartment",
       "area": 150,
       "bedroomsCount": 3,
-      "floor": 5,
-      "hasLoan": true
+      "floor": 5
    },
    {
       "id": 2,
@@ -16,8 +15,7 @@
       "buildingType": "villa",
       "area": 960,
       "bedroomsCount": 5,
-      "floor": 1,
-      "hasLoan": false
+      "floor": 1
    },
    {
       "id": 3,
@@ -26,8 +24,7 @@
       "buildingType": "house",
       "area": 630,
       "bedroomsCount": 4,
-      "floor": 1,
-      "hasLoan": false
+      "floor": 1
    },
    {
       "id": 4,
@@ -36,8 +33,7 @@
       "buildingType": "house",
       "area": 545,
       "bedroomsCount": 3,
-      "floor": 1,
-      "hasLoan": false
+      "floor": 1
    },
    {
       "id": 5,
@@ -46,8 +42,7 @@
       "buildingType": "condo",
       "area": 170,
       "bedroomsCount": 2,
-      "floor": 7,
-      "hasLoan": true
+      "floor": 7
    },
    {
       "id": 6,
@@ -56,8 +51,7 @@
       "buildingType": "duplex",
       "area": 212,
       "bedroomsCount": 3,
-      "floor": 1,
-      "hasLoan": true
+      "floor": 1
    },
    {
       "id": 7,
@@ -66,8 +60,7 @@
       "buildingType": "apartment",
       "area": 140,
       "bedroomsCount": 2,
-      "floor": 8,
-      "hasLoan": false
+      "floor": 8
    },
    {
       "id": 8,
@@ -76,8 +69,7 @@
       "buildingType": "apartment",
       "area": 125,
       "bedroomsCount": 1,
-      "floor": 6,
-      "hasLoan": true
+      "floor": 6
    },
    {
       "id": 9,
@@ -86,8 +78,7 @@
       "buildingType": "flat",
       "area": 90,
       "bedroomsCount": 1,
-      "floor": 2,
-      "hasLoan": false
+      "floor": 2
    },
    {
       "id": 10,
@@ -96,8 +87,7 @@
       "buildingType": "villa",
       "area": 320,
       "bedroomsCount": 3,
-      "floor": 1,
-      "hasLoan": false
+      "floor": 1
    }
 ]
 
