@@ -2,6 +2,9 @@ package ir.taghizadeh.android_mvp.dependencies;
 
 import com.google.gson.Gson;
 import io.realm.Realm;
+import ir.taghizadeh.android_mvp.activities.HomeListActivity;
+import ir.taghizadeh.android_mvp.activities.HomeListPresenter;
+import ir.taghizadeh.android_mvp.activities.HomeListPresenterImpl;
 import ir.taghizadeh.android_mvp.model.conversionLayer.Conversion;
 import ir.taghizadeh.android_mvp.model.conversionLayer.ConversionLayer;
 import ir.taghizadeh.android_mvp.model.conversionLayer.HomeConverter;
@@ -40,6 +43,11 @@ public class DependencyRegistry {
     private ModelLayer modelLayer = createModelLayer();
     private ModelLayer createModelLayer() {
         return new Model(networkLayer, dataLayer, conversionLayer);
+    }
+
+    public void inject(HomeListActivity activity) {
+        HomeListPresenter presenter = new HomeListPresenterImpl(modelLayer);
+        activity.configureWith(presenter);
     }
 
 }
