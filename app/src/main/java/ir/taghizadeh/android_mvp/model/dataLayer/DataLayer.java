@@ -1,4 +1,4 @@
-package ir.taghizadeh.android_mvp.model.database;
+package ir.taghizadeh.android_mvp.model.dataLayer;
 
 import java.util.List;
 import io.reactivex.functions.Action;
