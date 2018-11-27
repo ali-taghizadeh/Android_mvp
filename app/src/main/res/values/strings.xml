@@ -2,4 +2,6 @@
     <string name="app_name">Android_mvp</string>
     <string name="action_settings">Settings</string>
     <string name="android_mvp">Android MVP</string>
+    <string name="image">avatar%02d</string>
+    <string name="m2">m2</string>
 </resources>
