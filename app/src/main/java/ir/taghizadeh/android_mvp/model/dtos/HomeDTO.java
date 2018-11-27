@@ -3,6 +3,7 @@ package ir.taghizadeh.android_mvp.model.dtos;
 import ir.taghizadeh.android_mvp.model.enums.DTOType;
 
 public class HomeDTO {
+
     public static DTOType dtoType = DTOType.home;
 
     public int id;
