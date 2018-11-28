@@ -6,7 +6,7 @@ public interface HomeDetailsPresenter {
     String getDistrict();
     String getAdType();
     String getBuildingType();
-    int getArea();
-    int getBedroomsCount();
-    int getFloor();
+    String getArea();
+    String getBedroomsCount();
+    String getFloor();
 }

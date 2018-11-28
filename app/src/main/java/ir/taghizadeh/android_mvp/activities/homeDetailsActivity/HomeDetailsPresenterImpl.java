@@ -55,17 +55,17 @@ public class HomeDetailsPresenterImpl implements HomeDetailsPresenter {
     }
 
     @Override
-    public int getArea() {
-        return area;
+    public String getArea() {
+        return String.valueOf(area);
     }
 
     @Override
-    public int getBedroomsCount() {
-        return bedroomsCount;
+    public String getBedroomsCount() {
+        return String.valueOf(bedroomsCount);
     }
 
     @Override
-    public int getFloor() {
-        return floor;
+    public String getFloor() {
+        return String.valueOf(floor);
     }
 }
