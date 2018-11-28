@@ -2,9 +2,12 @@ package ir.taghizadeh.android_mvp.activities.homeListActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -39,21 +42,23 @@ public class HomeListActivity extends AppCompatActivity {
     }
 
     private void initializeListView() {
-        HomeListViewAdapter adapter = new HomeListViewAdapter(homeDTOS, (v, position) -> rowTapped(position));
+        HomeListViewAdapter adapter = new HomeListViewAdapter(homeDTOS, (v, position) -> rowTapped(v, position));
         recyclerView.setAdapter(adapter);
     }
 
-    private void rowTapped(int position) {
+    private void rowTapped(View view, int position) {
         HomeDTO homeDTO = homeDTOS.get(position);
-        changeActivity(homeDTO.id);
+        View avatar = view.findViewById(R.id.image_item_avatar);
+        changeActivity(homeDTO.id, avatar);
     }
 
-    private void changeActivity(int id) {
+    private void changeActivity(int id, View avatar) {
         Bundle bundle = new Bundle();
         bundle.putInt("id", id);
         Intent intent = new Intent(this, HomeDetailsActivity.class);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this, avatar, ViewCompat.getTransitionName(avatar));
         intent.putExtras(bundle);
-        this.startActivity(intent);
+        this.startActivity(intent, options.toBundle());
     }
 
     public void configureWith(HomeListPresenter presenter) {
