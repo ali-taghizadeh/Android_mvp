@@ -1,4 +1,4 @@
-package ir.taghizadeh.android_mvp.activities;
+package ir.taghizadeh.android_mvp.activities.homeListActivity;
 
 import android.content.Context;
 import android.content.res.Resources;

@@ -1,21 +1,20 @@
-package ir.taghizadeh.android_mvp.activities;
+package ir.taghizadeh.android_mvp.activities.homeListActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import ir.taghizadeh.android_mvp.R;
+import ir.taghizadeh.android_mvp.activities.homeDetailsActivity.HomeDetailsActivity;
 import ir.taghizadeh.android_mvp.dependencies.DependencyRegistry;
-import ir.taghizadeh.android_mvp.model.dataLayer.Home;
 import ir.taghizadeh.android_mvp.model.dtos.HomeDTO;
 import ir.taghizadeh.android_mvp.model.enums.Source;
-import ir.taghizadeh.android_mvp.model.networkLayer.Network;
 
 public class HomeListActivity extends AppCompatActivity {
 
@@ -45,7 +44,16 @@ public class HomeListActivity extends AppCompatActivity {
     }
 
     private void rowTapped(int position) {
+        HomeDTO homeDTO = homeDTOS.get(position);
+        changeActivity(homeDTO.id);
+    }
 
+    private void changeActivity(int id) {
+        Bundle bundle = new Bundle();
+        bundle.putInt("id", id);
+        Intent intent = new Intent(this, HomeDetailsActivity.class);
+        intent.putExtras(bundle);
+        this.startActivity(intent);
     }
 
     public void configureWith(HomeListPresenter presenter) {

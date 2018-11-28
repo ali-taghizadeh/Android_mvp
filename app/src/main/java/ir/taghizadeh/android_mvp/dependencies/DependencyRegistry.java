@@ -1,10 +1,18 @@
 package ir.taghizadeh.android_mvp.dependencies;
 
+import android.os.Bundle;
+
 import com.google.gson.Gson;
+
+import java.util.NoSuchElementException;
+
 import io.realm.Realm;
-import ir.taghizadeh.android_mvp.activities.HomeListActivity;
-import ir.taghizadeh.android_mvp.activities.HomeListPresenter;
-import ir.taghizadeh.android_mvp.activities.HomeListPresenterImpl;
+import ir.taghizadeh.android_mvp.activities.homeDetailsActivity.HomeDetailsActivity;
+import ir.taghizadeh.android_mvp.activities.homeDetailsActivity.HomeDetailsPresenter;
+import ir.taghizadeh.android_mvp.activities.homeDetailsActivity.HomeDetailsPresenterImpl;
+import ir.taghizadeh.android_mvp.activities.homeListActivity.HomeListActivity;
+import ir.taghizadeh.android_mvp.activities.homeListActivity.HomeListPresenter;
+import ir.taghizadeh.android_mvp.activities.homeListActivity.HomeListPresenterImpl;
 import ir.taghizadeh.android_mvp.model.conversionLayer.Conversion;
 import ir.taghizadeh.android_mvp.model.conversionLayer.ConversionLayer;
 import ir.taghizadeh.android_mvp.model.conversionLayer.HomeConverter;
@@ -48,6 +56,19 @@ public class DependencyRegistry {
     public void inject(HomeListActivity activity) {
         HomeListPresenter presenter = new HomeListPresenterImpl(modelLayer);
         activity.configureWith(presenter);
+    }
+
+    public void inject(HomeDetailsActivity activity, Bundle bundle) throws NoSuchElementException {
+        int homeId = idFromBundle(bundle);
+        HomeDetailsPresenter presenter = new HomeDetailsPresenterImpl(homeId, activity, modelLayer);
+        activity.configureWith(presenter);
+    }
+
+    private int idFromBundle(Bundle bundle) {
+        if(bundle == null) throw new NoSuchElementException("Unable to get id from bundle");
+        int homeId = bundle.getInt("id");
+        if(homeId == 0) throw new NoSuchElementException("Unable to get id from bundle");
+        return homeId;
     }
 
 }

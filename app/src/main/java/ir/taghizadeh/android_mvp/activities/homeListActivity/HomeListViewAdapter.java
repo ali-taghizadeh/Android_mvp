@@ -1,4 +1,4 @@
-package ir.taghizadeh.android_mvp.activities;
+package ir.taghizadeh.android_mvp.activities.homeListActivity;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
