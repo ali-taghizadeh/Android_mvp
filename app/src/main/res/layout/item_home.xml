@@ -5,14 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="100dp">
 
+
     <ImageView
         android:id="@+id/image_item_avatar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
         android:padding="5dp"
+        android:scaleType="centerCrop"
         android:transitionName="avatar"
+        app:layout_constraintDimensionRatio="w,3:2"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="lollipop" />
 
     <TextView
@@ -20,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/image_item_avatar"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:textSize="13sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/image_item_avatar"
         app:layout_constraintTop_toBottomOf="@+id/text_item_district" />
 
@@ -40,106 +44,74 @@
         android:layout_marginEnd="8dp"
         android:textColor="@color/colorAccent"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_item_district" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_item_district"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layout_item_bedroom"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/image_item_avatar">
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_bedroom"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/text_item_badge_bedroom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/badge"
-            android:elevation="2dp"
-            android:gravity="center_horizontal"
-            android:textColor="@color/white"
-            android:textSize="9sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:targetApi="lollipop" />
-
-    </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layout_item_floor"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="2dp"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/layout_item_bedroom">
+        app:layout_constraintStart_toEndOf="@+id/image_item_avatar"
+        app:srcCompat="@drawable/ic_bedroom" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_floor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/text_item_badge_floor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/badge"
-            android:elevation="2dp"
-            android:gravity="center_horizontal"
-            android:textColor="@color/white"
-            android:textSize="9sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:targetApi="lollipop" />
-
-    </android.support.constraint.ConstraintLayout>
-
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/layout_item_area"
+    <TextView
+        android:id="@+id/text_item_badge_bedroom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/badge"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/layout_item_floor">
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:srcCompat="@drawable/ic_floor" />
 
-        <ImageView
-            android:id="@+id/image_item_area"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_area"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/text_item_badge_floor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/badge"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
-        <TextView
-            android:id="@+id/text_item_area"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/image_item_area"
-            app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:srcCompat="@drawable/ic_area" />
 
-    </android.support.constraint.ConstraintLayout>
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/grey"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-
+    <TextView
+        android:id="@+id/text_item_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
 </android.support.constraint.ConstraintLayout>
